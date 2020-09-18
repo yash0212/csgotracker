@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSGO Tracker</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <h2>CSGO Matches tracker</h2>
+        <a href="#ongoing">Ongoing</a>
+        <a href="#upcoming">Upcoming</a>
+        <a href="#results">Results</a>
+    </nav>
+    <div id="default-text">
+        Click on above links to load data
+    </div>
+    <!-- Tab to display ongoing matches -->
+    <div id="ongoing" class="hide">
+    </div>
+    <!-- Tab to display upcoming matches -->
+    <div id="upcoming" class="hide">
+    </div>
+    <!-- Tab to display results -->
+    <div id="results" class="hide">
+    </div>
+
+    <!-- Ongoing Card clone -->
+    <div class="ongoing-card-clone hide">
+        <div class="ongoing-card" data-match-id="" data-match-link="">
+            <div class="match-name">
+            </div>
+            <img src="" alt="Match Crest" class="match-crest"/>
+            <div class="map"></div>
+            <div class="teams">
+                <div class="team1">
+                    <div class="team1-name"></div>
+                    <img src="" alt="Team 1 Crest" class="team-crest">
+                </div>
+                <div class="team2">
+                    <div class="team2-name"></div>
+                    <img src="" alt="Team 2 Crest" class="team-crest">
+                </div>
+            </div>
+            <div class="time"></div>
+        </div>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>
