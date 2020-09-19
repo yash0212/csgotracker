@@ -13,13 +13,13 @@ body {
     display: none;
 }
 
-#ongoing {
+#upcoming, #results {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.ongoing-card {
+.upcoming-card, .result-card {
     width: 300px;
     background-color: white;
     box-shadow: 0 0 10px 3px black;
@@ -30,36 +30,57 @@ body {
     margin: 10px;
 }
 
-.ongoing-card .match-name {
+.upcoming-card .match-name, .result-card .match-name {
     font-size: 16px;
     margin-bottom: 10px;
 }
 
-.ongoing-card .match-crest {
+.upcoming-card .match-crest, .result-card .match-crest {
+    margin-top: auto;
     max-width: 100px;
 }
 
-.ongoing-card .map {
+.upcoming-card .map {
     margin-top: 10px;
 }
 
-.ongoing-card .map i {
-    color: green;
+.result-card .map {
+    margin-top: auto
 }
 
-.ongoing-card .teams {
+.upcoming-card .map i, .result-card .map i {
+    color: green;
+    margin-right: 10px;
+}
+
+.upcoming-card .teams, .result-card .teams {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     margin: 5px 0;
 }
 
-.ongoing-card .team1, .ongoing-card .team2 {
+.upcoming-card .team1, .upcoming-card .team2, .result-card .team1, .result-card .team2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
-.ongoing-card .team-crest {
+.result-card .team1, .result-card .team2 {
+    width: 120px;
+    padding: 10px 0;
+}
+
+.upcoming-card .team-crest, .result-card .team-crest {
+    margin-top: auto;
     max-width: 80px;
+}
+
+.winner {
+    background-color: #D2222D;
+}
+
+.loser {
+    background-color: #238823
 }

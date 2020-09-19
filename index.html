@@ -14,15 +14,11 @@
 <body>
     <nav>
         <h2>CSGO Matches tracker</h2>
-        <a href="#ongoing">Ongoing</a>
-        <a href="#upcoming">Upcoming</a>
-        <a href="#results">Results</a>
+        <a href="#upcoming" onclick="updatePage()">Upcoming</a>
+        <a href="#results" onclick="updatePage()">Results</a>
     </nav>
     <div id="default-text">
         Click on above links to load data
-    </div>
-    <!-- Tab to display ongoing matches -->
-    <div id="ongoing" class="hide">
     </div>
     <!-- Tab to display upcoming matches -->
     <div id="upcoming" class="hide">
@@ -31,13 +27,16 @@
     <div id="results" class="hide">
     </div>
 
-    <!-- Ongoing Card clone -->
-    <div class="ongoing-card-clone hide">
-        <div class="ongoing-card" data-match-id="" data-match-link="">
+    <!-- Upcoming Card clone -->
+    <div class="upcoming-card-clone hide">
+        <div class="upcoming-card" data-match-id="" data-match-link="">
             <div class="match-name">
             </div>
             <img src="" alt="Match Crest" class="match-crest"/>
-            <div class="map"></div>
+            <div class="map">
+                <i class="fa fa-map"></i>
+                <span class="map-data"></span>
+            </div>
             <div class="teams">
                 <div class="team1">
                     <div class="team1-name"></div>
@@ -46,6 +45,28 @@
                 <div class="team2">
                     <div class="team2-name"></div>
                     <img src="" alt="Team 2 Crest" class="team-crest">
+                </div>
+            </div>
+            <div class="time"></div>
+        </div>
+    </div>
+
+    <!-- Result Card clone -->
+    <div class="result-card-clone hide">
+        <div class="result-card" data-match-link="">
+            <div class="match-name">
+            </div>
+            <div class="map"><i class="fa fa-map"></i><span class="map-data"></span></div>
+            <div class="teams">
+                <div class="team1">
+                    <div class="team1-name"></div>
+                    <img src="" alt="Team 1 Crest" class="team-crest">
+                    <div class="team1-score"></div>
+                </div>
+                <div class="team2">
+                    <div class="team2-name"></div>
+                    <img src="" alt="Team 2 Crest" class="team-crest">
+                    <div class="team2-score"></div>
                 </div>
             </div>
             <div class="time"></div>
